@@ -29,7 +29,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Nabeel:786Pakistan1234@cluster0.cctfjtp.mongodb.net/userDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Na@cluster0.cctfjtp.mongodb.net/userDB", {useNewUrlParser: true});
 
 const userSchema = new mongoose.Schema({
   email: String,
@@ -55,8 +55,8 @@ passport.serializeUser(function(user, cb) {
   });
 
 passport.use(new GoogleStrategy({
-    clientID: "680515033000-85knk1uhs48c52eofknh6u77dc09abo6.apps.googleusercontent.com",
-    clientSecret: "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",
+    clientID: "6805150330.apps.googleusercontent.com",
+    clientSecret: "GOCSPX-",
     callbackURL: "http://localhost:3000/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
